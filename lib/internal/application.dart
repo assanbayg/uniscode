@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:uniscode/presentation/graph_view_screen.dart';
+import 'package:uniscode/themes.dart';
+import 'package:uniscode/presentation/screens/graph_view_screen.dart';
+import 'package:uniscode/presentation/screens/home.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -8,14 +10,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'uNIScode',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const GraphViewScreen(),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       initialRoute: '/',
       routes: {
-        GraphViewScreen.routeName: (context) => const GraphViewScreen(),
+        HomeScreen.routeName: (context) => const HomeScreen(),
+        GraphViewScreen.routeName: (context) => GraphViewScreen(),
       },
     );
   }
