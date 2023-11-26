@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:graphview/graphview.dart';
 import 'package:uniscode/presentation/widgets/circle_node_widget.dart';
+import 'package:uniscode/presentation/widgets/topic_collections.dart';
 
 class GraphViewScreen extends StatefulWidget {
   static const routeName = '/graphview';
-  const GraphViewScreen({super.key});
+  const GraphViewScreen({super.key} );
 
   @override
   State<GraphViewScreen> createState() => _GraphViewScreenState();
@@ -17,6 +18,7 @@ class _GraphViewScreenState extends State<GraphViewScreen> {
   void initState() {
     // any json data you desire but i desire for sleep
     // but describe nodes and edges
+
     var jsonData = {
       'nodes': [
         {
@@ -116,8 +118,6 @@ class _GraphViewScreenState extends State<GraphViewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)?.settings.arguments as String;
-
     return Scaffold(
       body: InteractiveViewer(
         constrained: false,

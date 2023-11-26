@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uniscode/presentation/screens/graph_view_screen.dart';
+import 'package:uniscode/presentation/screens/options.dart';
 
 class TopicCollections extends StatelessWidget {
   const TopicCollections({super.key});
@@ -7,7 +7,7 @@ class TopicCollections extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -59,7 +59,7 @@ class Collection extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, GraphViewScreen.routeName,
+        Navigator.pushNamed(context, OptionScreen.routeName,
             arguments: collectionName);
       },
       child: Container(
@@ -88,15 +88,13 @@ class Collection extends StatelessWidget {
                 child: Icon(
                   iconData,
                   size: 80,
-                  // color: Theme.of(context).colorScheme.primaryContainer,
-                )),
-            Text(
-              collectionName,
-              style: const TextStyle(fontSize: 20, color: Colors.white),
-            ),
-          ],
-        ),
+              )),
+          Text(
+            collectionName,
+            style: const TextStyle(fontSize: 20, color: Colors.white),
+          ),
+        ],
       ),
-    );
+    ));
   }
 }
