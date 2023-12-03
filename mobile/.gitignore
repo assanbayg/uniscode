@@ -43,4 +43,9 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-/openai/.env
+/linux/
+/web/
+/android/
+/ios/
+/macos/
+/windows/
