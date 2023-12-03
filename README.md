@@ -1,16 +1,22 @@
 # uniscode
 
-A new Flutter project.
+Project for uNIScode hackathon which should help to learn languages effectively using Generative AI.Unfortunately it wasn't implemented the way I wanted during hackathon therefore I am polishing it.
 
-## Getting Started
+## Features 
 
-This project is a starting point for a Flutter application.
+- Creates graph based vocabulary
+- Generates simulation to immerse and use new vocabulary (so it generates pictures and gives options to use vocabulary)
 
-A few resources to get you started if this is your first Flutter project:
+## Endpoints
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- I remember only one yet
+### `/graph/`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Method:** GET
+- **Description:** Generate a graph
+
+  ```json
+  {
+    "topic": "Overpopulation",
+    "level": "A2-B1",
+  }
